@@ -18,3 +18,4 @@ Blood Bridge is a real-time platform to help donors, blood banks, and hospitals 
 ```bash
 git clone https://github.com/LifePulse-VitalBridge/rednova-ui.git
 cd rednova-ui
+Added a text to check is everything working correctly.
