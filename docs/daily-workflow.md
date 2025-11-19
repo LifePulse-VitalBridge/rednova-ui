@@ -12,6 +12,8 @@ git checkout feature/your-branch-name
 # 2. Update your branch directly from the remote Dev branch
 git fetch origin
 git merge origin/dev
+Or
+git pull origin dev - combination of fetch and merge.
 ```
 
 ## End of Day: Save, Sync & Submit
