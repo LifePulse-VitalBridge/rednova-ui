@@ -36,3 +36,19 @@ When using Gemini or ChatGPT to generate new 3D components, copy and paste the f
 - Use **Gemini** or **ChatGPT** with the prompts above.
 - Save your new component in `web/src/components/canvas/`.
 - Import the code into `Experience.jsx` to test it.
+
+## 📂 Storage & Structure Guidelines
+
+**Strictly follow these paths to keep the project organized:**
+
+### 1. Where to store 3D Models (Assets)
+* **Path:** `web/public/models/`
+* **File Types:** `.glb`, `.gltf`
+* **Rule:** These are heavy binary files. Never put them inside the `src` folder.
+
+### 2. Where to store 3D Logic (Code)
+* **Path:** `web/src/components/canvas/`
+* **File Types:** `.jsx` (React Components)
+* **Rule:** This is where you write the **Code**.
+    * **`Experience.jsx`**: This file contains **LOGIC only** (Lighting, Camera, Animations). It is *not* the model itself. It *loads* the model from the public folder.
+    * **New Components:** If you build a `Heart.jsx`, put it here.
