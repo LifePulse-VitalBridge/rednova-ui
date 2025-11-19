@@ -13,10 +13,9 @@ git checkout feature/your-branch-name
 git fetch origin
 git merge origin/dev
 
+
 ## End of Day: Save, Sync & Submit
 *Run this sequence when you are finished with your task and ready to create a Pull Request.*
-
-```bash
 # 1. Save your local changes first
 git add .
 git commit -m "Brief description of work done"
