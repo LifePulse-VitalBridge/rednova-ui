@@ -57,7 +57,7 @@ body, html, #root, #canvas-container {
   background-color: #050505;
 }
 ---
-Last thing i will always paste your code inside the Experience.jsx file.
+Last thing i will always paste your code inside the Experience.jsx file. Don't give code in anyother files.
 ```
 
 ## 📋 Daily Instructions
