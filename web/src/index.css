@@ -1,12 +1,89 @@
-* {
-  box-sizing: border-box;
+@import "tailwindcss";
+/* 1. The Smooth Motion (Breathing, not Thumping) */
+@keyframes smooth-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); } /* Smoothly expands */
+  100% { transform: scale(1); }   /* Smoothly shrinks */
 }
 
-body, html, #root, #canvas-container {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #050505;
+/* 2. The 5-Color Cycle (Red -> Purple -> Blue -> Green -> Gold) */
+/* We rotate the hue 360 degrees to get all colors */
+@keyframes rainbow-cycle {
+  0% { filter: hue-rotate(0deg) drop-shadow(0 0 50px rgba(220, 38, 38, 0.5)); }
+  25% { filter: hue-rotate(90deg) drop-shadow(0 0 50px rgba(220, 38, 38, 0.5)); }
+  50% { filter: hue-rotate(180deg) drop-shadow(0 0 50px rgba(220, 38, 38, 0.5)); }
+  75% { filter: hue-rotate(270deg) drop-shadow(0 0 50px rgba(220, 38, 38, 0.5)); }
+  100% { filter: hue-rotate(360deg) drop-shadow(0 0 50px rgba(220, 38, 38, 0.5)); }
+}
+
+/* 3. The 3D Float (Up and Down) */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+/* COMBINE THEM: 
+   - Pulse happens every 2 seconds (Fast)
+   - Colors change every 10 seconds (Slow cycle over 5 beats)
+   - Float happens every 6 seconds
+*/
+.animate-rainbow-heart {
+  animation: 
+    smooth-pulse 2s ease-in-out infinite, 
+    rainbow-cycle 10s linear infinite,
+    float 6s ease-in-out infinite;
+  will-change: transform, filter; /* Performance booster */
+}
+
+/* Add to index.css */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes flash-green {
+  0%, 100% { background-color: rgba(255, 255, 255, 0.05); }
+  50% { background-color: rgba(34, 197, 94, 0.2); border-color: rgba(34, 197, 94, 0.5); }
+}
+
+@keyframes flash-red {
+  0%, 100% { background-color: rgba(255, 255, 255, 0.05); }
+  50% { background-color: rgba(239, 68, 68, 0.2); border-color: rgba(239, 68, 68, 0.5); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-flash-green {
+  animation: flash-green 0.5s ease-in-out;
+}
+
+.animate-flash-red {
+  animation: flash-red 0.5s ease-in-out;
+}
+
+/* Moves Left */
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Moves Right */
+@keyframes scroll-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 90s linear infinite; /* 60s = speed */
+}
+
+.animate-scroll-right {
+  animation: scroll-right 90s linear infinite;
+}
+
+/* Pause animation when user hovers to read data */
+.pause-on-hover:hover {
+  animation-play-state: paused;
 }

@@ -2,9 +2,12 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
+import { AuthProvider } from '@descope/react-sdk';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <AuthProvider projectId={"P36f3a0NMRjFCmt81Eo50uxYfxWl"}>
+      <App />
+    </AuthProvider>
   </StrictMode>,
 )

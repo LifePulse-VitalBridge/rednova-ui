@@ -1,17 +1,25 @@
-import { Canvas } from "@react-three/fiber";
-import Experience from "./assets/components/canvas/Experience";
+import LandingPage from "./pages/LandingPage";
+import AuthPage from "./pages/AuthPage";
+import Home from "./pages/HomePage";
+import ProfilePage from "./pages/ProfilePage";
+import ProtectedRoute from "./components/ProtectedRoute";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import NetworkStatus from './components/NetworkStatus';
 
 export default function App() {
   return (
-    <div id="canvas-container">
-      <Canvas
-        shadows
-        camera={{ position: [0, 0, 18], fov: 35 }}
-        dpr={[1, 2]}
-        gl={{ antialias: false }}
-      >
-        <Experience />
-      </Canvas>
-    </div>
+    
+    <BrowserRouter>
+     <NetworkStatus />
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+         <Route path="/auth" element={<AuthPage/>} />
+        <Route path="/home" element={ <ProtectedRoute><Home /></ProtectedRoute>} />
+        <Route path="/profile" element={ <ProtectedRoute><ProfilePage /></ProtectedRoute>} /> */}
+
+        
+      </Routes>  
+    </BrowserRouter>
+
   );
 }
