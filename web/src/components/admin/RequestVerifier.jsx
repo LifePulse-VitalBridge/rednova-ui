@@ -29,6 +29,11 @@ const RequestVerifier = () => {
     } catch (err) { console.error("Verify Failed:", err); }
   };
 
+  const handleReject = (id) => {
+  // Simply filter out the rejected ID from the current state
+  setRequests(requests.filter(r => r._id !== id));
+};
+
   return (
     <div className="max-w-4xl mx-auto space-y-4">
       <div className="flex items-center gap-2 mb-6 text-yellow-500">
@@ -61,6 +66,7 @@ const RequestVerifier = () => {
 
            <div className="flex gap-4">
               <button 
+                onClick={() => handleReject(req._id)}
                 className="flex items-center gap-2 px-6 py-3 rounded-lg bg-zinc-950 border border-zinc-800 text-red-500 hover:bg-red-900/20 hover:border-red-500 transition-all font-bold text-xs tracking-widest"
               >
                 <XCircle size={16} /> REJECT
