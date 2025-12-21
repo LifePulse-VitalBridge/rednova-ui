@@ -12,7 +12,7 @@ import {
 } from 'firebase/auth';
 import { auth, googleProvider, yahooProvider, microsoftProvider } from '../config/firebase'; // Adjust path as needed
 import { Mail, ArrowRight, ArrowLeft, CheckCircle, AlertCircle } from 'lucide-react';
-import { syncUserToBackend, updateUserPhone } from '../services/authService';
+import { syncUserToBackend } from '../services/authService';
 import ParticlesBackground from '../components/ParticlesBackground';
 
 const AuthPage = () => {
@@ -91,11 +91,7 @@ const AuthPage = () => {
       try {
         const syncResponse = await syncUserToBackend(user); 
         console.log("✅ Database Synced");
-        if (syncResponse.user && syncResponse.user.phoneNumber) {
-          setExistingPhone(syncResponse.user.phoneNumber);
-        } else {
-          setExistingPhone(null);
-        }
+        
       } catch (dbError) {
         // We log the error, but we DO NOT stop the user.
         console.error("⚠️ Database Error (Ignored for Login):", dbError);
@@ -152,10 +148,8 @@ const AuthPage = () => {
       }
       // Sync user to backend
       const syncResponse = await syncUserToBackend(result.user);
-      if (syncResponse.user && syncResponse.user.phoneNumber) {
-        setExistingPhone(syncResponse.user.phoneNumber);
-      }
-      setUserId(result.user.uid); // Store user ID for phone verification
+      
+      
       setStep(3); // Go straight to success on social login
     } catch (err) {
       console.error(err);
