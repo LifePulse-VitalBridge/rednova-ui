@@ -1,10 +1,12 @@
 import twilio from 'twilio';
+import dotenv from 'dotenv';
 
+dotenv.config();
 // --- CONFIGURATION (Replace these with your details) ---
 
 // 1. From Twilio Console Dashboard (Account Info)
-const accountSid = 'AC8adf0fe6aaf4304dee7c02450e3bdd7e'; // Your Account SID
-const authToken = 'bb91c9c6bf183fb378934932c1870152';    // Your Auth Token
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+const authToken = process.env.TWILIO_AUTH_TOKEN;
 
 // 2. The Link you just copied from Twilio Assets
 const voiceUrl = 'https://rednova-5448.twil.io/REDNOVA_voice.mp3';
