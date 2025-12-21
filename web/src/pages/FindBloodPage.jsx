@@ -130,7 +130,7 @@ const FindBloodPage = () => {
       try {
         // You need an endpoint to get a single request status
         // Example: GET /api/blood-request/:id
-        const res = await axios.get(`http://localhost:5000/api/blood-request/${id}`);
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/blood-request/${id}`);
         const data = res.data;
 
         // CHECK IF ADMIN VERIFIED IT
