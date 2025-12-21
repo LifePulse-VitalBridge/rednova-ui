@@ -27,7 +27,7 @@ const DonorSchema = new mongoose.Schema({
   certificateApproved: { type: Boolean, default: false },
   // --- GAMIFICATION ---
   // Initial rank is always RECRUIT for new joiners
-  rank: { type: String, default: 'RECRUIT', enum: ['RECRUIT', 'OFFICER', 'COMMANDER', 'LEGEND'] },
+  rank: { type: String, default: 'RECRUIT', enum: ['RECRUIT', 'OFFICER', 'COMMANDER', 'LEGEND', 'VETERAN'] },
   donationCount: { type: Number, default: 0 }, // To track progression
   xp: { type: Number, default: 100 },
   badges: [{ 
