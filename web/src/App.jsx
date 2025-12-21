@@ -10,7 +10,7 @@ import FindBloodPage from "./pages/FindBloodPage";
 import JoinDonorPage from "./pages/JoinDonor";
 import AboutUsPage from "./pages/AboutUsPage";
 import ContactUsPage from "./pages/ContactUsPage";
-import AdminLoginPage from "./pages/adminLoginPage";
+import AdminLoginPage from "./pages/AdminLoginPage";
 import AdminPortalPage from "./pages/AdminPortalPage";
 import AdminProtectedRoute from "./components/admin/AdminProtectedRoute";
 
