@@ -43,7 +43,7 @@ const JoinDonorPage = () => {
    useEffect(() => {
       const checkStatus = async (currentUser) => {
          try {
-            const res = await axios.get(`http://localhost:5000/api/donor/status/${currentUser.email}`);
+            const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/donor/status/${currentUser.email}`);
 
             if (res.data.isDonor) {
                const d = res.data.donor;

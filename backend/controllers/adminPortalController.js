@@ -53,6 +53,7 @@ export const verifyRequest = async (req, res) => {
       { isVerified: true, status: 'APPROVED' }, 
       { new: true }
     );
+    console.log("Initiating Call for Verified Request:");
     await makeCall();
     res.json(updatedRequest);
   } catch (error) {

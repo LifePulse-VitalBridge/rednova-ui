@@ -5,11 +5,11 @@ dotenv.config();
 // --- CONFIGURATION (Replace these with your details) ---
 
 // 1. From Twilio Console Dashboard (Account Info)
-const accountSid = process.env.TWILIO_ACCOUNT_SID;
-const authToken = process.env.TWILIO_AUTH_TOKEN;
+const accountSid = "AC8adf0fe6aaf4304dee7c02450e3bdd7e";
+const authToken = "01ea3212936b38a3eba5cdd77e9f8403";
 
 // 2. The Link you just copied from Twilio Assets
-const voiceUrl = process.env.VOICE_URL;
+const voiceUrl = "https://rednova-5448.twil.io/REDNOVA_voice.mp3";
 
 // 3. Phone Numbers (Use standard format like +91...)
 const myVerifiedNumber = '+919279670355'; // Your personal mobile number
