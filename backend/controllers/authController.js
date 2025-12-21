@@ -1,3 +1,5 @@
+// Welcome email logic is added in the syncUser so remove it .
+
 import User from '../models/User.js';
 import {BloodBank} from '../models/mapBank.js';
 import { Resend } from 'resend';
@@ -36,6 +38,25 @@ export const syncUser = async (req, res) => {
       },
       { upsert: true, new: true }
     );
+    // Email Welcome Message
+    if (!user.isWelcomeEmailSent) {
+      try {
+        console.log("Sending Welcome Email to:", user.email);
+        await resend.emails.send({
+          from: 'RedNova <contact@rednovavital.tech>',
+          to: user.email,
+          subject: 'Welcome to RedNova Family!',
+          html: welcomeEmailTemplate(user.name),
+        });
+        // Mark Welcom Email as Sent
+        user.isWelcomeEmailSent = true;
+        console.log("Email sent successfully!");
+      } catch (emailError) {
+        console.error("Error sending welcome email:", emailError.message);
+      }
+    } else {
+      console.log("Welcome email was already sent.");
+    }
 
     res.status(200).json({ message: "User Synced", user });
   } catch (error) {
