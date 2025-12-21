@@ -7,7 +7,7 @@ import { AuthProvider } from '@descope/react-sdk';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <AuthProvider projectId={"P36f3a0NMRjFCmt81Eo50uxYfxWl"}
-    baseUrl="https://rednovavital.tech">
+    >
       <App />
     </AuthProvider>
   </StrictMode>,
