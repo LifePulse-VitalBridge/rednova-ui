@@ -50,7 +50,7 @@ const BloodBankManager = () => {
 
   const handleSave = async (id) => {
     try {
-        await fetch(`http://localhost:5000/api/admin-portal/banks/${id}`, {
+        await fetch(`${import.meta.env.VITE_API_URL}/api/admin-portal/banks/${id}`, {
             method: 'PUT',
             headers: { 
                 'Content-Type': 'application/json',
@@ -80,7 +80,7 @@ const BloodBankManager = () => {
         }
       };
 
-      const res = await fetch('http://localhost:5000/api/admin-portal/banks', {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/admin-portal/banks`, {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',

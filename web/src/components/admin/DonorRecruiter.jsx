@@ -33,7 +33,7 @@ const DonorRecruiter = () => {
 
   const handleUpdate = async (id) => {
     try {
-        await fetch(`http://localhost:5000/api/admin-portal/donors/${id}`, {
+        await fetch(`${import.meta.env.VITE_API_URL}/api/admin-portal/donors/${id}`, {
             method: 'PUT',
             headers: { 
                 'Content-Type': 'application/json',

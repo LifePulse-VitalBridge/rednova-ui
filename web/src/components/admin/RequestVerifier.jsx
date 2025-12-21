@@ -20,7 +20,7 @@ const RequestVerifier = () => {
 
   const handleVerify = async (id) => {
     try {
-        await fetch(`http://localhost:5000/api/admin-portal/requests/${id}/verify`, {
+        await fetch(`${import.meta.env.VITE_API_URL}/api/admin-portal/requests/${id}/verify`, {
             method: 'PUT',
             headers: { 'Authorization': token }
         });
