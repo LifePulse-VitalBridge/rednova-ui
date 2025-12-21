@@ -1,7 +1,5 @@
 import twilio from 'twilio';
-import dotenv from 'dotenv';
 
-dotenv.config();
 // --- CONFIGURATION (Replace these with your details) ---
 
 // 1. From Twilio Console Dashboard (Account Info)
