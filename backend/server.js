@@ -15,8 +15,9 @@ const app = express();
 
 const allowedOrigins = [
   "http://localhost:5173",                 // For local testing
-  "https://rednova-frontend.vercel.app",   // We will get this link from Vercel later
-  "https://www.your-custom-domain.com"     // Your real domain
+  "https://rednova-ui.vercel.app",         // Keep as backup
+  "https://rednovavital.tech",             // ✅ NEW: Main Domain
+  "https://www.rednovavital.tech"          // ✅ NEW: WWW Version
 ];
 
 app.use(cors({
