@@ -9,7 +9,7 @@ const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 
 // 2. The Link you just copied from Twilio Assets
-const voiceUrl = 'https://rednova-5448.twil.io/REDNOVA_voice.mp3';
+const voiceUrl = process.env.VOICE_URL;
 
 // 3. Phone Numbers (Use standard format like +91...)
 const myVerifiedNumber = '+919279670355'; // Your personal mobile number
