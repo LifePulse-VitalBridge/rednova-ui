@@ -13,7 +13,6 @@ import {
 import { auth, googleProvider, yahooProvider, microsoftProvider } from '../config/firebase'; // Adjust path as needed
 import { Mail, ArrowRight, ArrowLeft, CheckCircle, AlertCircle } from 'lucide-react';
 import { syncUserToBackend, updateUserPhone } from '../services/authService';
-import { Descope, useDescope } from '@descope/react-sdk';
 import ParticlesBackground from '../components/ParticlesBackground';
 
 const AuthPage = () => {
@@ -29,7 +28,7 @@ const AuthPage = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [providerType, setProviderType] = useState('password');
-  const [existingPhone, setExistingPhone] = useState(null);
+  
   
   // --- HANDLERS ---
 
@@ -103,7 +102,7 @@ const AuthPage = () => {
       }
 
       setUserId(user.uid); // Store user ID for phone verification
-      setStep(5); // Move to phone verification step
+      setStep(3); // Move to phone verification step
 
     } catch (err) {
       console.error(err);
@@ -157,7 +156,7 @@ const AuthPage = () => {
         setExistingPhone(syncResponse.user.phoneNumber);
       }
       setUserId(result.user.uid); // Store user ID for phone verification
-      setStep(5); // Go straight to success on social login
+      setStep(3); // Go straight to success on social login
     } catch (err) {
       console.error(err);
       setError("Social login failed.");
@@ -174,32 +173,7 @@ const AuthPage = () => {
     setError('');
   };
 
-  // --- NEW: Descope Success Handler ---
-  const handleDescopeSuccess = async (e) => {
-    console.log("Descope Success:", e.detail.user);
-    
-    // Descope returns user info in e.detail.user
-    // The phone number is usually in e.detail.user.phone or loginId
-    const verifiedPhone = e.detail.user.phone || e.detail.user.loginIds[0]; 
-
-    if (verifiedPhone && userId) {
-      try {
-        setLoading(true);
-        // Call your existing service to update MongoDB
-        await updateUserPhone(userId, verifiedPhone);
-        
-        // Move to Success Screen
-        setStep(3); 
-      } catch (err) {
-        console.error("Backend update failed", err);
-        setError("Phone verified, but database update failed.");
-      } finally {
-        setLoading(false);
-      }
-    } else {
-      setError("Could not retrieve phone number from verification.");
-    }
-  };
+  
   const navigate = useNavigate();
   // --- RENDER: SUCCESS VIEW (Step 3) ---
   useEffect(() => {
