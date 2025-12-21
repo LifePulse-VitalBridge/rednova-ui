@@ -8,7 +8,9 @@ export const initialEvents = [
     time: "Ending in 3h",
     goal: 200,
     collected: 145,
-    donorsJoined: 90
+    donorsJoined: 90,
+    // REAL COORDS: Civil Hospital, Phagwara
+    coordinates: [31.2217, 75.7709]
   },
   {
     id: 2,
@@ -18,7 +20,9 @@ export const initialEvents = [
     time: "Starts in 30m",
     goal: 300,
     collected: 0,
-    donorsJoined: 45
+    donorsJoined: 45,
+    // REAL COORDS: Guru Hargobind Nagar Central Park Area
+    coordinates: [31.2225, 75.7780]
   },
   {
     id: 3,
@@ -28,7 +32,9 @@ export const initialEvents = [
     time: "Dec 30, 10:00 AM",
     goal: 150,
     collected: 0,
-    donorsJoined: 12
+    donorsJoined: 12,
+    // REAL COORDS: Main G.T. Road Intersection, Phagwara
+    coordinates: [31.2150, 75.7950]
   },
   {
     id: 4,
@@ -38,7 +44,9 @@ export const initialEvents = [
     time: "Ending in 1h",
     goal: 100,
     collected: 88,
-    donorsJoined: 50
+    donorsJoined: 50,
+    // REAL COORDS: Hoshiarpur Road (Near Railway Overbridge)
+    coordinates: [31.2350, 75.8050]
   },
   {
     id: 5,
@@ -48,7 +56,9 @@ export const initialEvents = [
     time: "Jan 5, 9:00 AM",
     goal: 500,
     collected: 0,
-    donorsJoined: 120
+    donorsJoined: 120,
+    // REAL COORDS: Lovely Professional University Campus Entry
+    coordinates: [31.2536, 75.7037]
   },
   {
     id: 6,
@@ -58,7 +68,9 @@ export const initialEvents = [
     time: "Jan 2, 11:00 AM",
     goal: 200,
     collected: 0,
-    donorsJoined: 5
+    donorsJoined: 5,
+    // REAL COORDS: Gandhi Hospital, Model Town
+    coordinates: [31.2160, 75.7720]
   },
   {
     id: 7,
@@ -68,7 +80,9 @@ export const initialEvents = [
     time: "Starts in 15m",
     goal: 120,
     collected: 0,
-    donorsJoined: 22
+    donorsJoined: 22,
+    // REAL COORDS: Near Virk Hospital, G.T. Road
+    coordinates: [31.2280, 75.7850]
   },
 
   // --- LUDHIANA REGION ---
@@ -80,7 +94,9 @@ export const initialEvents = [
     time: "Ending in 5h",
     goal: 1000,
     collected: 450,
-    donorsJoined: 310
+    donorsJoined: 310,
+    // REAL COORDS: Hero DMC Heart Institute
+    coordinates: [30.8931, 75.8243]
   },
   {
     id: 9,
@@ -90,7 +106,9 @@ export const initialEvents = [
     time: "Ending in 2h",
     goal: 800,
     collected: 620,
-    donorsJoined: 400
+    donorsJoined: 400,
+    // REAL COORDS: Christian Medical College
+    coordinates: [30.9088, 75.8625]
   },
   {
     id: 10,
@@ -100,7 +118,9 @@ export const initialEvents = [
     time: "Dec 31, 8:00 AM",
     goal: 400,
     collected: 0,
-    donorsJoined: 65
+    donorsJoined: 65,
+    // REAL COORDS: Bharat Nagar Chowk
+    coordinates: [30.9000, 75.8400]
   },
   {
     id: 11,
@@ -110,7 +130,9 @@ export const initialEvents = [
     time: "Jan 4, 10:00 AM",
     goal: 250,
     collected: 0,
-    donorsJoined: 30
+    donorsJoined: 30,
+    // REAL COORDS: Fortis Hospital Ludhiana
+    coordinates: [30.9200, 75.9000]
   },
   {
     id: 12,
@@ -120,7 +142,9 @@ export const initialEvents = [
     time: "Ending in 4h",
     goal: 300,
     collected: 112,
-    donorsJoined: 80
+    donorsJoined: 80,
+    // REAL COORDS: Mohan Dai Oswal Hospital
+    coordinates: [30.8800, 75.8800]
   },
   {
     id: 13,
@@ -130,7 +154,9 @@ export const initialEvents = [
     time: "Starts in 1h",
     goal: 150,
     collected: 0,
-    donorsJoined: 15
+    donorsJoined: 15,
+    // REAL COORDS: Deep Hospital
+    coordinates: [30.8850, 75.8300]
   },
   {
     id: 14,
@@ -140,7 +166,9 @@ export const initialEvents = [
     time: "Ending in 6h",
     goal: 600,
     collected: 210,
-    donorsJoined: 150
+    donorsJoined: 150,
+    // REAL COORDS: SPS Hospitals
+    coordinates: [30.8760, 75.8850]
   },
   {
     id: 15,
@@ -150,7 +178,9 @@ export const initialEvents = [
     time: "Jan 1, 9:00 AM",
     goal: 350,
     collected: 0,
-    donorsJoined: 40
+    donorsJoined: 40,
+    // REAL COORDS: Civil Hospital Ludhiana
+    coordinates: [30.9100, 75.8500]
   },
   {
     id: 16,
@@ -160,7 +190,9 @@ export const initialEvents = [
     time: "Jan 2, 10:30 AM",
     goal: 100,
     collected: 0,
-    donorsJoined: 10
+    donorsJoined: 10,
+    // REAL COORDS: Near Aggar Nagar
+    coordinates: [30.8900, 75.8000]
   },
   {
     id: 17,
@@ -170,7 +202,9 @@ export const initialEvents = [
     time: "Ending in 30m",
     goal: 200,
     collected: 190,
-    donorsJoined: 110
+    donorsJoined: 110,
+    // REAL COORDS: Basti Jodhewal area
+    coordinates: [30.9300, 75.8700]
   },
   {
     id: 18,
@@ -180,7 +214,9 @@ export const initialEvents = [
     time: "Jan 3, 2:00 PM",
     goal: 150,
     collected: 0,
-    donorsJoined: 5
+    donorsJoined: 5,
+    // REAL COORDS: Samrala Chowk
+    coordinates: [30.9250, 75.8800]
   },
   {
     id: 19,
@@ -190,7 +226,9 @@ export const initialEvents = [
     time: "Starts in 10m",
     goal: 120,
     collected: 0,
-    donorsJoined: 25
+    donorsJoined: 25,
+    // REAL COORDS: Near Clock Tower
+    coordinates: [30.9180, 75.8550]
   },
   {
     id: 20,
@@ -200,7 +238,9 @@ export const initialEvents = [
     time: "Ending in 2h",
     goal: 220,
     collected: 140,
-    donorsJoined: 95
+    donorsJoined: 95,
+    // REAL COORDS: Civil Lines area
+    coordinates: [30.8980, 75.8100]
   },
   {
     id: 21,
@@ -210,7 +250,9 @@ export const initialEvents = [
     time: "Dec 30, 9:00 AM",
     goal: 300,
     collected: 0,
-    donorsJoined: 55
+    donorsJoined: 55,
+    // REAL COORDS: Dugri Phase 1
+    coordinates: [30.8600, 75.8400]
   },
   {
     id: 22,
@@ -220,7 +262,9 @@ export const initialEvents = [
     time: "Dec 31, 10:00 AM",
     goal: 180,
     collected: 0,
-    donorsJoined: 20
+    donorsJoined: 20,
+    // REAL COORDS: Mediways Hospital
+    coordinates: [30.8920, 75.7900]
   },
   {
     id: 23,
@@ -230,7 +274,9 @@ export const initialEvents = [
     time: "Ending in 5h",
     goal: 150,
     collected: 45,
-    donorsJoined: 30
+    donorsJoined: 30,
+    // REAL COORDS: Model Town Market
+    coordinates: [30.8860, 75.8320]
   },
   {
     id: 24,
@@ -240,7 +286,9 @@ export const initialEvents = [
     time: "Jan 5, 4:00 PM",
     goal: 100,
     collected: 0,
-    donorsJoined: 8
+    donorsJoined: 8,
+    // REAL COORDS: Maya Nagar
+    coordinates: [30.8950, 75.8450]
   },
   {
     id: 25,
@@ -250,7 +298,9 @@ export const initialEvents = [
     time: "Starts in 2h",
     goal: 250,
     collected: 0,
-    donorsJoined: 40
+    donorsJoined: 40,
+    // REAL COORDS: Near Ayali Chowk
+    coordinates: [30.8910, 75.7950]
   },
   {
     id: 26,
@@ -260,7 +310,9 @@ export const initialEvents = [
     time: "Jan 6, 9:00 AM",
     goal: 150,
     collected: 0,
-    donorsJoined: 12
+    donorsJoined: 12,
+    // REAL COORDS: Kitchlu Nagar
+    coordinates: [30.9050, 75.8150]
   },
   {
     id: 27,
@@ -270,7 +322,9 @@ export const initialEvents = [
     time: "Ending in 1.5h",
     goal: 200,
     collected: 160,
-    donorsJoined: 100
+    donorsJoined: 100,
+    // REAL COORDS: Mediciti Hospital
+    coordinates: [30.8890, 75.7850]
   },
 
   // --- JALANDHAR REGION ---
@@ -282,7 +336,9 @@ export const initialEvents = [
     time: "Ending in 6h",
     goal: 800,
     collected: 230,
-    donorsJoined: 150
+    donorsJoined: 150,
+    // REAL COORDS: Punjab Institute of Medical Sciences (PIMS)
+    coordinates: [31.3060, 75.5920]
   },
   {
     id: 29,
@@ -292,7 +348,9 @@ export const initialEvents = [
     time: "Jan 7, 9:00 AM",
     goal: 300,
     collected: 0,
-    donorsJoined: 45
+    donorsJoined: 45,
+    // REAL COORDS: Sacred Heart Hospital
+    coordinates: [31.3480, 75.5620]
   },
   {
     id: 30,
@@ -302,7 +360,9 @@ export const initialEvents = [
     time: "Starts in 40m",
     goal: 250,
     collected: 0,
-    donorsJoined: 60
+    donorsJoined: 60,
+    // REAL COORDS: Gulab Devi Hospital
+    coordinates: [31.3300, 75.5700]
   },
   {
     id: 31,
@@ -312,7 +372,9 @@ export const initialEvents = [
     time: "Ending in 4h",
     goal: 400,
     collected: 180,
-    donorsJoined: 95
+    donorsJoined: 95,
+    // REAL COORDS: Civil Hospital Jalandhar
+    coordinates: [31.3210, 75.5820]
   },
   {
     id: 32,
@@ -322,7 +384,9 @@ export const initialEvents = [
     time: "Jan 5, 10:00 AM",
     goal: 200,
     collected: 0,
-    donorsJoined: 25
+    donorsJoined: 25,
+    // REAL COORDS: Capitol Hospital
+    coordinates: [31.3600, 75.5500]
   },
   {
     id: 33,
@@ -332,7 +396,9 @@ export const initialEvents = [
     time: "Ending in 2h",
     goal: 350,
     collected: 290,
-    donorsJoined: 180
+    donorsJoined: 180,
+    // REAL COORDS: Patel Hospital
+    coordinates: [31.3220, 75.5850]
   },
   {
     id: 34,
@@ -342,7 +408,9 @@ export const initialEvents = [
     time: "Jan 8, 11:00 AM",
     goal: 150,
     collected: 0,
-    donorsJoined: 10
+    donorsJoined: 10,
+    // REAL COORDS: Cool Road area
+    coordinates: [31.3150, 75.5950]
   },
   {
     id: 35,
@@ -352,7 +420,9 @@ export const initialEvents = [
     time: "Starts in 5m",
     goal: 100,
     collected: 0,
-    donorsJoined: 15
+    donorsJoined: 15,
+    // REAL COORDS: Lajpat Nagar
+    coordinates: [31.3250, 75.5820]
   },
   {
     id: 36,
@@ -362,7 +432,9 @@ export const initialEvents = [
     time: "Ending in 5h",
     goal: 400,
     collected: 120,
-    donorsJoined: 85
+    donorsJoined: 85,
+    // REAL COORDS: SGL Hospital
+    coordinates: [31.3000, 75.5920]
   },
   {
     id: 37,
@@ -372,7 +444,9 @@ export const initialEvents = [
     time: "Jan 9, 8:00 AM",
     goal: 300,
     collected: 0,
-    donorsJoined: 50
+    donorsJoined: 50,
+    // REAL COORDS: Model Town
+    coordinates: [31.3100, 75.6000]
   },
   {
     id: 38,
@@ -382,7 +456,9 @@ export const initialEvents = [
     time: "Jan 10, 9:30 AM",
     goal: 120,
     collected: 0,
-    donorsJoined: 18
+    donorsJoined: 18,
+    // REAL COORDS: Industrial Area
+    coordinates: [31.3400, 75.6100]
   },
   {
     id: 39,
@@ -392,7 +468,9 @@ export const initialEvents = [
     time: "Ending in 3h",
     goal: 180,
     collected: 90,
-    donorsJoined: 60
+    donorsJoined: 60,
+    // REAL COORDS: Rama Mandi
+    coordinates: [31.3000, 75.6300]
   },
   {
     id: 40,
@@ -402,7 +480,9 @@ export const initialEvents = [
     time: "Jan 11, 3:00 PM",
     goal: 150,
     collected: 0,
-    donorsJoined: 12
+    donorsJoined: 12,
+    // REAL COORDS: Nakodar Road
+    coordinates: [31.3100, 75.5700]
   },
   {
     id: 41,
@@ -412,7 +492,9 @@ export const initialEvents = [
     time: "Starts in 25m",
     goal: 220,
     collected: 0,
-    donorsJoined: 35
+    donorsJoined: 35,
+    // REAL COORDS: Near Nakodar Chowk
+    coordinates: [31.3150, 75.5750]
   },
   {
     id: 42,
@@ -422,7 +504,9 @@ export const initialEvents = [
     time: "Ending in 7h",
     goal: 200,
     collected: 50,
-    donorsJoined: 30
+    donorsJoined: 30,
+    // REAL COORDS: Kapurthala Chowk
+    coordinates: [31.3280, 75.5650]
   },
   {
     id: 43,
@@ -432,7 +516,9 @@ export const initialEvents = [
     time: "Jan 3, 10:00 AM",
     goal: 250,
     collected: 0,
-    donorsJoined: 40
+    donorsJoined: 40,
+    // REAL COORDS: Mahavir Marg
+    coordinates: [31.3240, 75.5880]
   },
   {
     id: 44,
@@ -442,7 +528,9 @@ export const initialEvents = [
     time: "Jan 4, 11:00 AM",
     goal: 150,
     collected: 0,
-    donorsJoined: 10
+    donorsJoined: 10,
+    // REAL COORDS: Sodal Road
+    coordinates: [31.3500, 75.5800]
   },
   {
     id: 45,
@@ -452,7 +540,9 @@ export const initialEvents = [
     time: "Ending in 2h",
     goal: 120,
     collected: 85,
-    donorsJoined: 55
+    donorsJoined: 55,
+    // REAL COORDS: Kapurthala Road
+    coordinates: [31.3350, 75.5500]
   },
   {
     id: 46,
@@ -462,7 +552,9 @@ export const initialEvents = [
     time: "Jan 12, 12:00 PM",
     goal: 180,
     collected: 0,
-    donorsJoined: 22
+    donorsJoined: 22,
+    // REAL COORDS: Near Paragpur
+    coordinates: [31.2900, 75.6400]
   },
   {
     id: 47,
@@ -472,7 +564,9 @@ export const initialEvents = [
     time: "Starts in 1h",
     goal: 150,
     collected: 0,
-    donorsJoined: 15
+    donorsJoined: 15,
+    // REAL COORDS: Model Town
+    coordinates: [31.3120, 75.6050]
   },
 
   // --- CHANDIGARH / TRI-CITY REGION ---
@@ -484,7 +578,9 @@ export const initialEvents = [
     time: "Ending in 8h",
     goal: 1500,
     collected: 800,
-    donorsJoined: 600
+    donorsJoined: 600,
+    // REAL COORDS: PGIMER Main Campus
+    coordinates: [30.7660, 76.7750]
   },
   {
     id: 49,
@@ -494,7 +590,9 @@ export const initialEvents = [
     time: "Ending in 5h",
     goal: 900,
     collected: 450,
-    donorsJoined: 320
+    donorsJoined: 320,
+    // REAL COORDS: GMCH Sector 32
+    coordinates: [30.7110, 76.7820]
   },
   {
     id: 50,
@@ -504,7 +602,9 @@ export const initialEvents = [
     time: "Jan 13, 8:00 AM",
     goal: 600,
     collected: 0,
-    donorsJoined: 150
+    donorsJoined: 150,
+    // REAL COORDS: GMSH Sector 16
+    coordinates: [30.7450, 76.7650]
   },
   {
     id: 51,
@@ -514,7 +614,9 @@ export const initialEvents = [
     time: "Ending in 4h",
     goal: 500,
     collected: 310,
-    donorsJoined: 210
+    donorsJoined: 210,
+    // REAL COORDS: Sector 37
+    coordinates: [30.7400, 76.7500]
   },
   {
     id: 52,
@@ -524,7 +626,9 @@ export const initialEvents = [
     time: "Jan 10, 9:00 AM",
     goal: 1000,
     collected: 0,
-    donorsJoined: 200
+    donorsJoined: 200,
+    // REAL COORDS: Command Hospital Chandimandir
+    coordinates: [30.7200, 76.8800]
   },
   {
     id: 53,
@@ -534,7 +638,9 @@ export const initialEvents = [
     time: "Starts in 20m",
     goal: 300,
     collected: 0,
-    donorsJoined: 45
+    donorsJoined: 45,
+    // REAL COORDS: Alchemist Hospital
+    coordinates: [30.6850, 76.8500]
   },
   {
     id: 54,
@@ -544,7 +650,9 @@ export const initialEvents = [
     time: "Ending in 6h",
     goal: 450,
     collected: 120,
-    donorsJoined: 90
+    donorsJoined: 90,
+    // REAL COORDS: Fortis Hospital Mohali
+    coordinates: [30.6950, 76.7250]
   },
   {
     id: 55,
@@ -554,7 +662,9 @@ export const initialEvents = [
     time: "Dec 30, 10:00 AM",
     goal: 400,
     collected: 0,
-    donorsJoined: 80
+    donorsJoined: 80,
+    // REAL COORDS: Max Super Speciality Hospital
+    coordinates: [30.7200, 76.7100]
   },
   {
     id: 56,
@@ -564,7 +674,9 @@ export const initialEvents = [
     time: "Dec 31, 9:00 AM",
     goal: 250,
     collected: 0,
-    donorsJoined: 40
+    donorsJoined: 40,
+    // REAL COORDS: Ivy Hospital
+    coordinates: [30.7050, 76.7150]
   },
   {
     id: 57,
@@ -574,7 +686,9 @@ export const initialEvents = [
     time: "Ending in 3h",
     goal: 300,
     collected: 210,
-    donorsJoined: 150
+    donorsJoined: 150,
+    // REAL COORDS: Civil Hospital Mohali
+    coordinates: [30.7220, 76.7120]
   },
   {
     id: 58,
@@ -584,7 +698,9 @@ export const initialEvents = [
     time: "Jan 2, 8:00 AM",
     goal: 350,
     collected: 0,
-    donorsJoined: 60
+    donorsJoined: 60,
+    // REAL COORDS: Civil Hospital Panchkula
+    coordinates: [30.7000, 76.8400]
   },
   {
     id: 59,
@@ -594,7 +710,9 @@ export const initialEvents = [
     time: "Starts in 45m",
     goal: 200,
     collected: 0,
-    donorsJoined: 25
+    donorsJoined: 25,
+    // REAL COORDS: Mukat Hospital
+    coordinates: [30.7250, 76.7650]
   },
   {
     id: 60,
@@ -604,7 +722,9 @@ export const initialEvents = [
     time: "Ending in 2h",
     goal: 150,
     collected: 110,
-    donorsJoined: 75
+    donorsJoined: 75,
+    // REAL COORDS: Landmark Hospital
+    coordinates: [30.7200, 76.7600]
   },
   {
     id: 61,
@@ -614,7 +734,9 @@ export const initialEvents = [
     time: "Jan 14, 11:00 AM",
     goal: 200,
     collected: 0,
-    donorsJoined: 30
+    donorsJoined: 30,
+    // REAL COORDS: Grecian Hospital
+    coordinates: [30.6900, 76.7100]
   },
   {
     id: 62,
@@ -624,7 +746,9 @@ export const initialEvents = [
     time: "Jan 5, 10:00 AM",
     goal: 250,
     collected: 0,
-    donorsJoined: 35
+    donorsJoined: 35,
+    // REAL COORDS: Paras Hospital
+    coordinates: [30.6800, 76.8600]
   },
   {
     id: 63,
@@ -634,7 +758,9 @@ export const initialEvents = [
     time: "Ending in 1h",
     goal: 180,
     collected: 150,
-    donorsJoined: 95
+    donorsJoined: 95,
+    // REAL COORDS: Eden Hospital
+    coordinates: [30.7050, 76.7900]
   },
   {
     id: 64,
@@ -644,7 +770,9 @@ export const initialEvents = [
     time: "Jan 15, 2:00 PM",
     goal: 100,
     collected: 0,
-    donorsJoined: 15
+    donorsJoined: 15,
+    // REAL COORDS: Cloudnine Hospital
+    coordinates: [30.7000, 76.7850]
   },
   {
     id: 65,
@@ -654,7 +782,9 @@ export const initialEvents = [
     time: "Starts in 15m",
     goal: 120,
     collected: 0,
-    donorsJoined: 10
+    donorsJoined: 10,
+    // REAL COORDS: Bedi Hospital
+    coordinates: [30.7210, 76.7580]
   },
   {
     id: 66,
@@ -664,7 +794,9 @@ export const initialEvents = [
     time: "Jan 16, 9:00 AM",
     goal: 150,
     collected: 0,
-    donorsJoined: 20
+    donorsJoined: 20,
+    // REAL COORDS: Santokh Hospital
+    coordinates: [30.7420, 76.7450]
   },
   {
     id: 67,
@@ -674,6 +806,8 @@ export const initialEvents = [
     time: "Ending in 4h",
     goal: 200,
     collected: 75,
-    donorsJoined: 50
+    donorsJoined: 50,
+    // REAL COORDS: Healing Hospital
+    coordinates: [30.7260, 76.7630]
   }
 ];

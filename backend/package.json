@@ -12,6 +12,7 @@
   "type": "module",
   "dependencies": {
     "@descope/node-sdk": "^1.7.19",
+    "bcryptjs": "^3.0.3",
     "cloudinary": "^2.8.0",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
@@ -24,6 +25,7 @@
     "nodemon": "^3.1.11",
     "resend": "^6.6.0",
     "streamifier": "^0.1.1",
-    "tesseract.js": "^7.0.0"
+    "tesseract.js": "^7.0.0",
+    "twilio": "^5.11.1"
   }
 }

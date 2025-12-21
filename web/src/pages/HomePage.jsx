@@ -189,12 +189,12 @@ const Home = () => {
         <div className="hidden md:flex items-center gap-4">
 
           {/* 1. 'Join' Button (Ghost Style - Cleaner look) */}
-          <button className="px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider border border-white/30 hover:bg-white/10 hover:border-white transition-all text-white backdrop-blur-md">
+          <button onClick={() => navigate('/joinDonor')} className="px-5 cursor-pointer py-2.5 rounded-full text-xs font-bold uppercase tracking-wider border border-white/30 hover:bg-white/10 hover:border-white transition-all text-white backdrop-blur-md">
             Join as Donor
           </button>
 
           {/* 2. 'Find Blood' Button (Primary Gradient - The main focus) */}
-          <button className="px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-500 hover:to-pink-500 text-white shadow-[0_0_20px_rgba(220,38,38,0.4)] hover:shadow-[0_0_30px_rgba(220,38,38,0.6)] hover:scale-105 transition-all">
+          <button onClick={() => navigate('/findBlood')} className="px-6 cursor-pointer py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-500 hover:to-pink-500 text-white shadow-[0_0_20px_rgba(220,38,38,0.4)] hover:shadow-[0_0_30px_rgba(220,38,38,0.6)] hover:scale-105 transition-all">
             Find Blood
           </button>
 

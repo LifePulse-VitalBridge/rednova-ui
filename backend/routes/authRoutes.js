@@ -1,6 +1,6 @@
 import express from 'express';
 import multer from 'multer';
-import { syncUser, updatePhone, getUserProfile, updateUserProfile, uploadAvatar } from '../controllers/authController.js';
+import { syncUser, updatePhone, getUserProfile, updateUserProfile, uploadAvatar, getNearbyBanks } from '../controllers/authController.js';
 
 const router = express.Router();
 
@@ -14,4 +14,5 @@ router.post('/update-phone', updatePhone);
 router.get('/:email', getUserProfile);
 router.put('/update', updateUserProfile);
 router.post('/upload-avatar', upload.single('avatar'), uploadAvatar);
+router.get('/bloodbanks/nearby', getNearbyBanks);
 export default router;

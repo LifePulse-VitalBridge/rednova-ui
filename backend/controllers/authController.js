@@ -1,4 +1,5 @@
 import User from '../models/User.js';
+import {BloodBank} from '../models/mapBank.js';
 import { Resend } from 'resend';
 import { welcomeEmailTemplate } from '../services/emailTemplates.js'
 import dotenv from 'dotenv';
@@ -62,7 +63,7 @@ export const updatePhone = async (req, res) => {
       try {
         console.log("Sending Welcome Email to:", user.email);
         await resend.emails.send({
-          from: 'RedNova <onboarding@resend.dev>',
+          from: 'RedNova <contact@rednovavital.tech>',
           to: user.email,
           subject: 'Welcome to RedNova Family!',
           html: welcomeEmailTemplate(user.name),
@@ -171,6 +172,111 @@ export const uploadAvatar = async (req, res) => {
     res.status(200).json({ message: "Image Uploaded Successfully", imageUrl: result.secure_url });
   } catch (error) {
     console.error("Upload Avatar Error:", error);
+    res.status(500).json({ message: "Server Error", error: error.message });
+  }
+};
+
+
+
+export const getNearbyBanks = async (req, res) => {
+  try {
+    const { lat, lng, search } = req.query;
+
+    if (!lat || !lng) {
+      return res.status(400).json({ message: "Coordinates (lat, lng) required" });
+    }
+
+    const userLat = parseFloat(lat);
+    const userLng = parseFloat(lng);
+    
+    // Default Filter: Must have SOME stock to be listed
+    let matchQuery = { totalStock: { $gt: 0 } }; 
+
+    // --- SEARCH LOGIC ENGINE ---
+    if (search && search.trim() !== "") {
+      const cleanSearch = search.trim();
+      
+      // LOG THE EXACT SEARCH TERM RECEIVED (For Debugging)
+      console.log(`🔍 Processing Search: "${cleanSearch}"`); 
+
+      // REGEX EXPLANATION:
+      // ^                -> Start of string
+      // (A\+|...|AB-)    -> Capture Blood Type (Group 1)
+      // \s* -> Allow ZERO or MORE spaces (Fixes "A+12" vs "A+ 12")
+      // (\d+)            -> Capture Number (Group 2)
+      // $                -> End of string
+      const bloodWithUnit = /^(A\+|A-|B\+|B-|O\+|O-|AB\+|AB-)\s*(\d+)$/i.exec(cleanSearch);
+      
+      const bloodOnly = /^(A\+|A-|B\+|B-|O\+|O-|AB\+|AB-)$/i.exec(cleanSearch);
+
+      if (bloodWithUnit) {
+        // CASE: "A+ 12"
+        const type = bloodWithUnit[1].toUpperCase();
+        const units = parseInt(bloodWithUnit[2]);
+        console.log(`🎯 DETECTED UNIT SEARCH: Type=${type}, Units=${units}`); // Debug Log
+        
+        matchQuery = { [`stock.${type}`]: { $gte: units } };
+      } 
+      else if (bloodOnly) {
+        // CASE: "A+"
+        const type = bloodOnly[1].toUpperCase();
+        console.log(`🩸 DETECTED TYPE SEARCH: Type=${type}`); // Debug Log
+        
+        matchQuery = { [`stock.${type}`]: { $gt: 0 } };
+      } 
+      else {
+        // CASE: Name/Location
+        matchQuery = {
+          $or: [
+            { name: { $regex: cleanSearch, $options: 'i' } },
+            { location: { $regex: cleanSearch, $options: 'i' } }
+          ]
+        };
+      }
+    }
+
+    // --- AGGREGATION PIPELINE ---
+    const banks = await BloodBank.aggregate([
+      // 1. Calculate Distance (Always Step 1)
+      {
+        $geoNear: {
+          near: { type: "Point", coordinates: [userLng, userLat] },
+          distanceField: "dist.calculated",
+          maxDistance: 500000, // 500km
+          spherical: true
+        }
+      },
+      // 2. Sum Total Stock (Helper for filtering)
+      {
+        $addFields: {
+          totalStock: {
+            $add: [
+              "$stock.A+", "$stock.A-", "$stock.B+", "$stock.B-",
+              "$stock.O+", "$stock.O-", "$stock.AB+", "$stock.AB-"
+            ]
+          }
+        }
+      },
+      // 3. Apply the Logic We Built Above
+      { $match: matchQuery },
+      
+      // 4. Sort by Distance (Nearest First)
+      // Note: $geoNear does this by default, but this ensures it stays sorted after filtering
+      { $sort: { "dist.calculated": 1 } }
+    ]);
+
+    // --- FORMATTING (Apply Road Factor) ---
+    const refinedBanks = banks.map(bank => ({
+      ...bank,
+      dist: { 
+        calculated: bank.dist.calculated * 1.4 // 1.4x Road Curvature Estimation
+      }
+    }));
+
+    res.status(200).json(refinedBanks);
+
+  } catch (error) {
+    console.error("Search Logic Error:", error);
     res.status(500).json({ message: "Server Error", error: error.message });
   }
 };

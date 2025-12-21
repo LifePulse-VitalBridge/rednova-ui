@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X, ChevronRight, Heart, Activity, User, Phone, Info } from 'lucide-react';
+import { X, ChevronRight, Heart, Activity, User, Phone, Info, Radar } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { getAuth } from 'firebase/auth';
 import { fetchUserProfile } from '../services/authService'; // Ensure this path is correct
@@ -40,13 +40,25 @@ const HomeSidebar = ({ isOpen, onClose }) => {
     {
       label: "Find Blood",
       icon: Activity,
-      action: () => { onClose(); document.getElementById("blood-market")?.scrollIntoView({ behavior: "smooth" }); },
+      action: () => { onClose(); navigate('/findblood'); },
       highlight: true
     },
     {
       label: "Join as Donor",
       icon: Heart,
-      action: () => { onClose(); /* Add your Join Logic Here */ },
+      action: () => { onClose(); navigate('/joinDonor') },
+      highlight: false
+    },
+    {
+      label: "Bio-Radar",
+      icon: Radar,
+      action: () => { onClose(); navigate('/nexus'); },
+      highlight: false
+    },
+    {
+      label: "Home Base",
+      icon: User,
+      action: () => { onClose(); navigate('/home'); },
       highlight: false
     },
     {
@@ -82,7 +94,7 @@ const HomeSidebar = ({ isOpen, onClose }) => {
           </h2>
           <button
             onClick={onClose}
-            className="p-2 rounded-full bg-white/5 text-gray-400 hover:text-white hover:bg-red-600 transition-all duration-300"
+            className="p-2 cursor-pointer rounded-full bg-white/5 text-gray-400 hover:text-white hover:bg-red-600 transition-all duration-300"
           >
             <X size={24} />
           </button>
@@ -94,7 +106,7 @@ const HomeSidebar = ({ isOpen, onClose }) => {
             <button
               key={index}
               onClick={item.action}
-              className={`group relative flex items-center gap-4 p-4 rounded-xl text-left transition-all duration-300 overflow-hidden
+              className={`group cursor-pointer relative flex items-center gap-4 p-4 rounded-xl text-left transition-all duration-300 overflow-hidden
                 ${item.highlight
                   ? 'bg-gradient-to-r from-red-600/20 to-purple-600/20 border border-red-500/30 hover:border-red-500'
                   : 'bg-white/5 border border-white/5 hover:bg-white/10 hover:border-white/20'
@@ -126,7 +138,7 @@ const HomeSidebar = ({ isOpen, onClose }) => {
         <div className="absolute bottom-0 left-0 w-full p-6 border-t border-white/10 bg-black/40 backdrop-blur-md">
           <button
             onClick={() => { onClose(); navigate('/profile'); }}
-            className="flex items-center gap-4 w-full p-3 rounded-xl hover:bg-white/5 transition-colors group"
+            className="flex cursor-pointer items-center gap-4 w-full p-3 rounded-xl hover:bg-white/5 transition-colors group"
           >
             {/* LOGIC START: Check Image -> Check Name -> Default Icon */}
             {profileImageUrl ? (

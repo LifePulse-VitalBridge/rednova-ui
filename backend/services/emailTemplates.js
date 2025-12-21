@@ -54,3 +54,37 @@ export const welcomeEmailTemplate = (name) => {
     </html>
   `;
 };
+
+
+export const contactUsTemplate = (identity, frequency, transmission) => {
+  return `
+    <div style="font-family: 'Courier New', monospace; background-color: #000000; color: #e0e0e0; padding: 40px; border: 1px solid #333;">
+      
+      <div style="border-bottom: 2px solid #dc2626; padding-bottom: 20px; margin-bottom: 30px;">
+        <h2 style="color: #dc2626; margin: 0; letter-spacing: 2px;">REDNOVA SUPPORT :: TICKET OPENED</h2>
+        <p style="color: #4ade80; font-size: 14px; margin-top: 10px;">✅ We have received your concern.</p>
+      </div>
+
+      <p style="color: #fff; font-size: 16px; margin-bottom: 30px;">
+        Greetings <strong>${identity}</strong>,
+        <br><br>
+        This is an automated confirmation that your query has been logged in our system. 
+        Our agents are currently reviewing your data and working on a resolution. 
+        You can expect a response shortly.
+      </p>
+
+      <div style="background-color: #111; border: 1px solid #333; padding: 20px; border-left: 4px solid #dc2626; margin-bottom: 30px;">
+        <p style="color: #888; font-size: 12px; margin-top: 0; text-transform: uppercase;">Your Submitted Issue:</p>
+        <p style="font-size: 15px; line-height: 1.6; white-space: pre-wrap; color: #fff;">"${transmission}"</p>
+      </div>
+
+      <div style="border-top: 1px solid #333; pt-20px; text-align: center; color: #444; font-size: 10px; margin-top: 40px;">
+        <p>REDNOVA COMMAND CENTER [SECTOR 7]</p>
+        <p>Ref: #${Date.now().toString().slice(-6)} // Status: PROCESSING</p>
+      </div>
+    </div>
+  `;
+};
+
+// ... keep your welcomeEmailTemplate export below ...
+

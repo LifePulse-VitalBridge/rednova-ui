@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:5000/api', 
+  baseURL: import.meta.env.VITE_API_URL + '/api', 
   headers: { 'Content-Type': 'application/json' }
 });
 
@@ -71,3 +71,14 @@ export const uploadUserAvatar = async (file, email) => {
     throw error.response?.data?.message || "Failed to Upload User Avatar";
   }
 }
+
+export const createBloodRequest = async (requestData) => {
+  try {
+    // requestData contains: { email, patientDetails, medicalInfo, location, etc. }
+    const response = await api.post('/blood-request/create', requestData);
+    return response.data;
+  } catch (error) {
+    console.error("Blood Request Failed:", error);
+    throw error.response?.data?.message || "Failed to transmit distress signal";
+  }
+};
