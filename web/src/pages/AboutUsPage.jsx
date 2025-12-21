@@ -112,8 +112,8 @@ const AboutUsPage = () => {
                     </h1>
 
                     <p className="max-w-2xl mx-auto text-gray-400 text-lg md:text-xl font-mono">
-            > Decentralized Blood Banking Protocol.<br />
-            > Saving lives at the speed of code.
+             Decentralized Blood Banking Protocol.<br />
+             Saving lives at the speed of code.
                     </p>
                 </ScrollScale>
             </div>
