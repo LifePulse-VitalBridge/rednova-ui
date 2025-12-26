@@ -74,10 +74,10 @@ export const getApplicants = async (req, res) => {
 export const updateDonorStats = async (req, res) => {
   try {
     // Admin can edit Rank, XP, DonationCount
-    const { rank, xp, donationCount } = req.body;
+    const { rank, xp, donationCount, certificateApproved } = req.body;
     const updatedDonor = await User.findByIdAndUpdate(
       req.params.id, 
-      { rank, xp, donationCount, certificateApproved: true, isAppliedForMission: false }, 
+      { rank, xp, donationCount, certificateApproved, isAppliedForMission: false }, 
       { new: true }
     );
     res.json(updatedDonor);
