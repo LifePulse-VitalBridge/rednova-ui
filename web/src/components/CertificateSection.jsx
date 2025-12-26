@@ -13,7 +13,7 @@ const CertificateSection = () => {
             if (user) {
                 try {
                     // Use the REAL Firebase UID here
-                    const response = await axios.get(`/api/certificate/${user.uid}`);
+                    const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/certificate/${user.uid}`);
                     setCertData(response.data);
                 } catch (err) {
                     console.error("Backend sync error", err);
