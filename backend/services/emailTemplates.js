@@ -32,7 +32,7 @@ export const welcomeEmailTemplate = (name) => {
             <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin: 30px 0;">
               <tr>
                 <td align="center">
-                  <a href="http://localhost:5173/dashboard" style="background-color: #dc2626; color: #ffffff; padding: 14px 28px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 16px; display: inline-block;">Go to Dashboard</a>
+                  <a href="https://rednovavital.tech" style="background-color: #dc2626; color: #ffffff; padding: 14px 28px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 16px; display: inline-block;">Go to Dashboard</a>
                 </td>
               </tr>
             </table>
@@ -86,5 +86,5 @@ export const contactUsTemplate = (identity, frequency, transmission) => {
   `;
 };
 
-// ... keep your welcomeEmailTemplate export below ...
+
 
