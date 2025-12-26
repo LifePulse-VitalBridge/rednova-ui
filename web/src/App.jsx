@@ -13,6 +13,7 @@ import ContactUsPage from "./pages/ContactUsPage";
 import AdminLoginPage from "./pages/AdminLoginPage";
 import AdminPortalPage from "./pages/AdminPortalPage";
 import AdminProtectedRoute from "./components/admin/AdminProtectedRoute";
+import Certificate from "./pages/Certificate";
 
 export default function App() {
   return (
@@ -29,11 +30,11 @@ export default function App() {
         <Route path="/joinDonor" element={<ProtectedRoute><JoinDonorPage/></ProtectedRoute>} />
         <Route path="/about" element={<ProtectedRoute><AboutUsPage /></ProtectedRoute>} />
         <Route path="/contact" element={<ProtectedRoute><ContactUsPage /></ProtectedRoute>} />
+        <Route path="/certificate" element={<ProtectedRoute><Certificate /></ProtectedRoute>} />
         <Route path="/admin-login" element={<AdminLoginPage />} />
         <Route path="/admin-portal" element={<AdminProtectedRoute><AdminPortalPage /></AdminProtectedRoute>} />
       </Routes>  
     </BrowserRouter>
-    
 
   );
 }
