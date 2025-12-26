@@ -209,7 +209,7 @@ const AuthPage = () => {
       // Start the timer
       const timer = setTimeout(() => {
         setStep(1); // Reset internal state
-        navigate('/profile', { replace: true }); // Navigate away And Even on Click back No Return
+        navigate('/home', { replace: true }); // Navigate away And Even on Click back No Return
       }, 3000); // 2 seconds to match animation
 
       // Cleanup: Kills the timer if the user closes the component early
