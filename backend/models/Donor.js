@@ -25,6 +25,7 @@ const DonorSchema = new mongoose.Schema({
   availability: { type: Boolean, default: true },
   isAppliedForMission: { type: Boolean, default: false },
   certificateApproved: { type: Boolean, default: false },
+  certificateCID: { type: String, default: null },
   // --- GAMIFICATION ---
   // Initial rank is always RECRUIT for new joiners
   rank: { type: String, default: 'RECRUIT', enum: ['RECRUIT', 'OFFICER', 'COMMANDER', 'LEGEND', 'VETERAN'] },

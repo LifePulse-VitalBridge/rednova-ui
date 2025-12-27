@@ -8,6 +8,7 @@ import donorRoutes from './routes/donorRoutes.js';
 import contactRoutes from './routes/contactRoutes.js';
 import adminRoutes from './routes/adminRoutes.js';
 import adminPortalRoutes from './routes/adminPortalRoutes.js';
+import certificateRoutes from './routes/certificateRoutes.js';
 
 dotenv.config();
 
@@ -38,6 +39,7 @@ app.use('/api/donor', donorRoutes);
 app.use('/api/contact', contactRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/admin-portal', adminPortalRoutes);
+app.use('/api/certificate', certificateRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
